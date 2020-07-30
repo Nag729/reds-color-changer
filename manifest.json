@@ -2,16 +2,14 @@
 	"name": "Reds Color Changer",
 	"version": "1.0",
 	"description": "Change the Color!",
-	"permissions": ["declarativeContent", "storage"],
-	"background": {
-		"scripts": ["background.js"],
-		"persistent": false
-	},
-	"page_action": {
-		"default_popup": "popup.html",
-		"default_icon": {
-			"32": "images/get_started32.png"
+	"content_scripts": [
+		{
+			"matches": ["https://bm.best-hit.tv/*"],
+			"js": ["content.js"]
 		}
+	],
+	"icons": {
+		"48": "images/urawa-reds.png"
 	},
-	"manifest_version": 1
+	"manifest_version": 2
 }
